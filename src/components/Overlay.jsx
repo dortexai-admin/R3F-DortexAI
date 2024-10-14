@@ -11,7 +11,7 @@ const Section = ({ children, right }) => {
         >
             <div className="w-1/2 flex items-center justify-center">
                 <div className="max-w-sm w-full">
-                    <div className="bg-white rounded-lg px-8 py-12">
+                    <div className=" rounded-lg px-8 py-12 backdrop-blur-sm bg-white/80">
                         {children}
                     </div>
                 </div>
@@ -54,7 +54,7 @@ const renderDescription = (description) => {
 export const Overlay = () => {
     return (
         <Scroll html>
-            <div className="w-screen">
+            <div className="w-screen ">
                 {content.map((item, index) => (
                     <Section key={index} right={index % 2 !== 0}>
                         <h1>{item.title}</h1>

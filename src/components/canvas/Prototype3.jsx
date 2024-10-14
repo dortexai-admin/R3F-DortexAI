@@ -38,33 +38,8 @@ export function Prototype3(props) {
 			0
 		);
 
-		// // Whole Floor animtion
-		// tl.current.from(
-		//   ref.current.position,
-		//   {
-		//     duration: 0.5,
-		//     y: 0,
-		//   },
-		//   -0.5
-		// );
-
-		// FLOOR One ANIMATION
-		tl.current.from(
-			floorOneRef.current.position,
-			{
-				duration: 0.5,
-				z: -2,
-			},
-			-0.5
-		);
-		tl.current.to(
-			floorOneRef.current.position,
-			{
-				duration: 0.5,
-				y: -2,
-			},
-			1
-		);
+		
+		
 
 		// FLOOR Two ANIMATION
 		tl.current.from(

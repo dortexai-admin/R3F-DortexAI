@@ -6,7 +6,7 @@ Command: npx gltfjsx@6.2.16 .\public\Models\prototype3.gltf
 import { useGLTF, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { gsap } from "gsap";
-import React, { useLayoutEffect, useRef } from "react";
+import	 { useLayoutEffect, useRef } from "react";
 
 export const FLOOR_HEIGHT = 2;
 export const NB_FLOORS = 3;
@@ -28,81 +28,15 @@ export function Prototype3(props) {
 		tl.current = gsap.timeline();
 
 		// VERTICAL ANIMATION
+		// tl.current.to(
+		// 	ref.current.position,
+		// 	{
+		// 		duration: 2,
+		// 		y: -FLOOR_HEIGHT * (NB_FLOORS - 1),
+		// 	},
+		// 	0
+		// );
 
-		tl.current.to(
-			ref.current.position,
-			{
-				duration: 2,
-				y: -FLOOR_HEIGHT * (NB_FLOORS - 1),
-			},
-			0
-		);
-
-		
-		
-
-		// FLOOR Two ANIMATION
-		tl.current.from(
-			floorTwoRef.current.position,
-			{
-				duration: 0.5,
-				z: -8,
-			},
-			0
-		);
-		tl.current.to(
-			floorTwoRef.current.rotation,
-			{
-				duration: 0.5,
-				y: Math.PI / 2,
-			},
-			0.5
-		);
-		tl.current.to(
-			floorTwoRef.current.position,
-			{
-				duration: 0.75,
-				z: 2,
-				x: 2,
-			},
-			1
-		);
-
-		tl.current.to(
-			floorTwoRef.current.position,
-			{
-				duration: 0.5,
-				y: -6,
-			},
-			3
-		);
-
-		// FLOOR Three ANIMATION
-		tl.current.from(
-			floorThreeRef.current.position,
-			{
-				duration: 0.5,
-				y: 5,
-			},
-			1.75
-		);
-		tl.current.to(
-			floorThreeRef.current.position,
-			{
-				duration: 0.5,
-				z: 2,
-			},
-			2.5
-		);
-
-		tl.current.to(
-			floorThreeRef.current.position,
-			{
-				duration: 0.5,
-				x: 2,
-			},
-			3
-		);
 		
 	}, []);
 
